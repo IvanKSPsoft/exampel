@@ -1,2 +1,2 @@
 # exampel
-Example of simple Playwright Framework
+Example of simple Playwright(ts) Framework
