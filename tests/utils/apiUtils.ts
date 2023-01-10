@@ -39,7 +39,6 @@ export class ApiUtils {
         expect(loginUser.ok()).toBeTruthy()
         const response = await loginUser.json()
         const token = response.token
-        console.log(token)
         return {token}
     }
 }

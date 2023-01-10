@@ -9,7 +9,6 @@ test.describe('API Sign Up', () => {
         const app = new App(page)
         const apiUtils = new ApiUtils(apiContext)
         const createNewUser = await apiUtils.createUser(`${testData.appUrl}/${testData.signUpApiUrl}`, testData.email)
-        console.log(createNewUser.email)
 
         await app.loginPage.loginToTheApp(createNewUser.email, testData.pass)
     })
@@ -19,7 +18,7 @@ test.describe('API Sign Up', () => {
         const apiUtils = new ApiUtils(apiContext)
         const createNewUser = await apiUtils.createUser(`${testData.appUrl}/${testData.signUpApiUrl}`, testData.email)
         const loginUser = await apiUtils.loginUser(`${testData.appUrl}/${testData.loginApiUrl}`, createNewUser.email)
-        //set cookie
+
         page.addInitScript(value => {
             window.localStorage.setItem('token', value)
         }, loginUser.token);

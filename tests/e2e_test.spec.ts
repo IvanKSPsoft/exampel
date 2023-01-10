@@ -1,9 +1,9 @@
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
 import { App } from './pages/app';
 import { testData } from './utils/dataset';
 
 
-test('Create new user', async ({page}) => {
+test('e2e flow', async ({page}) => {
   const app = new App(page),
   email = testData.email
 
@@ -19,13 +19,10 @@ test('Create new user', async ({page}) => {
   await app.singUpPage.selectGenderMale()
   await app.singUpPage.acceptTOSCheckbox()
   await app.singUpPage.clickRegistrButton()
-console.log(email)
   await app.loginPage.open()
   await app.loginPage.inpuEmailField(email)
   await app.loginPage.inpuPasswordField(testData.pass)
   await app.loginPage.clickLoginButton()
-
-
   await app.mainPage.clickAddToCardAddidas()
   await app.mainPage.clickCartButton()
   await app.mainPage.clickCheckoutBtn()
