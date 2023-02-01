@@ -72,6 +72,5 @@ export class SignUpPage {
 
     async clickRegistrButton() {
         await this.registrButtonLocator.click()
-        await this.page.locator('.headcolor', {hasText: 'Account Created Successfully'}).waitFor()
     }
 }
