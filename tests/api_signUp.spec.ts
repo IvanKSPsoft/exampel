@@ -16,7 +16,7 @@ test.describe('API Sign Up', () => {
     test('Login user from API', async({page}) => {
         const apiContext = await request.newContext()
         const apiUtils = new ApiUtils(apiContext)
-        const createNewUser = await apiUtils.createUser(`${testData.appUrl}/${testData.signUpApiUrl}`, testData.email)
+        const createNewUser = await apiUtils.createUser(`${testData.appUrl}/${testData.signUpApiUrl}`, testData.secondEmail)
         const loginUser = await apiUtils.loginUser(`${testData.appUrl}/${testData.loginApiUrl}`, createNewUser.email)
 
         page.addInitScript(value => {

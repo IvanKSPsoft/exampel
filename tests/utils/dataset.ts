@@ -1,6 +1,7 @@
 export const testData = {
     appUrl : 'https://rahulshettyacademy.com/',
-    email: `ivantest+${Math.floor(Math.random() * 100000)}@spsoft.com`,
+    email: `ivantest+${Math.floor(Math.random() * (999999 - 100000) + 100000)}@gmail.com`,
+    secondEmail: `second+${Math.floor(Math.random() * (999999 - 100000) + 100000)}@gmail.com`,
     firstName: 'FirstName',
     lastName: 'LastName',
     pass: 'Qwerty123456',
