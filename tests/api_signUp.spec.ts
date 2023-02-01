@@ -24,5 +24,6 @@ test.describe('API Sign Up', () => {
         }, loginUser.token);
 
         await page.goto('https://rahulshettyacademy.com/client/')
+        await page.waitForLoadState('networkidle')
     })
 })
