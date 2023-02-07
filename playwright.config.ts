@@ -13,7 +13,7 @@ const config: PlaywrightTestConfig = {
   workers: process.env.CI ? 1 : 6,
   reporter: [
     ['line'],
-    ['experimental-allure-playwright']
+    ['allure-playwright']
   ],
   use: {
     headless: false,
