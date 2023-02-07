@@ -23,7 +23,7 @@ jobs:
         with:  
           run: npm run test
   
-       - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v3
         with:
          name: allure-results
          path: allure-results
