@@ -3,6 +3,7 @@ import { LoginPage } from './login_page';
 import { MainPage } from './main_page';
 import { SignUpPage } from './sing-up.page';
 
+//app manager
 export class App {
     page: Page
     loginPage: LoginPage
