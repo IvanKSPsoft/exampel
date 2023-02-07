@@ -18,8 +18,7 @@ test.describe('API Sign Up', () => {
         const apiUtils = new ApiUtils(apiContext)
         const createNewUser = await apiUtils.createUser(`${testData.appUrl}/${testData.signUpApiUrl}`, testData.secondEmail)
         const loginUser = await apiUtils.loginUser(`${testData.appUrl}/${testData.loginApiUrl}`, createNewUser.email)
-        
-        // set cookies for login
+
         page.addInitScript(value => {
             window.localStorage.setItem('token', value)
         }, loginUser.token);
